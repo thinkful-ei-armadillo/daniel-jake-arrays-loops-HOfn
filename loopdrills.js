@@ -7,9 +7,6 @@ function max(numbers) {
     if ( numbers[i] >= currentMax ) {
       currentMax = numbers[i]; 
     }
-    else {
-      return undefined;
-    }
     i++;
   }
   return currentMax;
@@ -24,9 +21,13 @@ function min (numbers) {
     if ( numbers[i] <= currentMin ) {
       currentMin = numbers[i]; 
     }
+<<<<<<< HEAD
     else {
       return undefined;
     }
+=======
+   
+>>>>>>> f6c504d682996db2b698c499bf5641afdb4abcbe
     i++;
   }
   return currentMin;
