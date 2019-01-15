@@ -2,10 +2,11 @@
 
 function average(numbers) {
   let total = 0;
-  numbers.forEach(function(i) {
-    total += numbers[i];
+  numbers.forEach(function (item) {
+    total += item;
   });
-  return total / numbers.length;
+  let result =  total / numbers.length;
+  return result;
 }
 
 /* From here down, you are not expected to 
