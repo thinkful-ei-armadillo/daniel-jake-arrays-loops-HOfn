@@ -76,26 +76,14 @@ posMovements.forEach( ( element ) => console.log(`Our turtle took a total of ${e
 
 const input = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
 
-// const inputArray = input.reduce(' ');
-
-// // inputArray.forEach(inputArray[i] = 3)
-
-// let accumulator;
-
-// switch(inputArray[i].length) {
-// case 3 : 
-//   return ' ';
-// default : 
-//   inputArray[i][i.length - 1].toUpperCase;
-// }
-
-const decoder = function(input) { 
+const decoder = function (input) {
   return input.split(' ').reduce((acc, cur) => {
-    if ( cur = 3 ) {
-      acc.push(' ');
+    if (cur.length === 3) {
+      return acc + ' '
+    } else {
+      return acc + cur[cur.length - 1].toUpperCase();
     }
-    else {
-      cur[cur.length - 1].toUppercase();
-  }
-    return acc;
-  };
+  }, '')
+}
+
+console.log(decoder(input));
