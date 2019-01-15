@@ -1,42 +1,32 @@
-'use strict';
+'use strict'
 
-function max(numbers) {
-  // let i = 0;
-  let result;
-  // while ( i <= numbers.length ) {
-  //   if ( i = 0 ) {
-  //     result = number
-  //   }
-  //   else if ( numbers[i] > numbers[i + 1] ) {
-  //     result = numbers[i];
-  //   }
-  //   i++;
-  // }
-  for ( let i = 0; i < numbers.length; i++ ) {
-    numbers[i] = result;
-    if ( result > numbers[i] ) {
-      numbers[i] = result;
-    }
-  }
-  return result;
+function max (numbers) {
+  let currentMax = numbers[0];
+  let i = 0;
+   while (i <= numbers.length) {
+    if (numbers[i] > currentMax) {
+      currentMax = numbers[i];
+      i++; 
+      };
+  };
+  return currentMax
 }
 
-max([1,2,3,4,5]);
+max([1, 2, 3, 4, 5])
 
-function min(numbers) {
+function min (numbers) {
   // your code here
 }
 
-/* From here down, you are not expected to 
-   understand.... for now :)  
-   
-   
+/* From here down, you are not expected to
+   understand.... for now :)
+
+
    Nothing to see here!
-   
+
 */
 
 // tests
-
 
 // function testFunctionWorks(fn, input, expected) {
 //   if (fn(input) === expected) {
