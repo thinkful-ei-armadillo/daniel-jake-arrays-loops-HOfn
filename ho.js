@@ -60,7 +60,18 @@ rockWarning('Centinela Ave and Olympic Blvd');
 floodWarning('Downtown Phoenix, Arizona');
 snowWarning('Snow St and Flurry Way, Malibu, CA');
 
-  const turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]
-  let posMovements = turtleMovements.filter(tM =>tM > 0)
-  console.log(posMovements);
+// turtle moving function
+
+const turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]
+
+const total = turtleMovements;
+
+let posMovements = total.filter( ( steps ) => steps[0] >= 0 && steps[1] >= 0 );
+
+posMovements.map ( ( element ) => element[0] + element[1] );
+
+posMovements.forEach( ( element ) => console.log(`Our turtle took a total of ${element} steps!`));
+
+// reduce function
+
   
