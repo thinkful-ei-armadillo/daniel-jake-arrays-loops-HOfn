@@ -59,3 +59,8 @@ rockWarning('Main St and Pacific Ave');
 rockWarning('Centinela Ave and Olympic Blvd');
 floodWarning('Downtown Phoenix, Arizona');
 snowWarning('Snow St and Flurry Way, Malibu, CA');
+
+  const turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]
+  let posMovements = turtleMovements.filter(tM =>tM > 0)
+  console.log(posMovements);
+  
