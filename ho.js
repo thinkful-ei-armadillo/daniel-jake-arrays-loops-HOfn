@@ -42,4 +42,20 @@ console.log(filteredNames); // => ['Rich', 'Ray']
 
 console.log(filter(myNames, arr => arr[0] === 'R'));
 
-//filter(myNames);
+function hazardWarningCreator(typeOfWarning) {
+  let warningCounter = 0;
+  return function ( location ) {
+    warningCounter++;
+    console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}`);
+    console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
+  };
+}
+
+const rockWarning = hazardWarningCreator('Rocks on the Road');
+const floodWarning = hazardWarningCreator('Water is flooding the streets. Drive carefully.');
+const snowWarning = hazardWarningCreator('Expected snowfall exceeds 3 inches in the next 6 hours.');
+
+rockWarning('Main St and Pacific Ave');
+rockWarning('Centinela Ave and Olympic Blvd');
+floodWarning('Downtown Phoenix, Arizona');
+snowWarning('Snow St and Flurry Way, Malibu, CA');
