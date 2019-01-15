@@ -17,11 +17,14 @@ const goodbye = () => console.log('Goodbye world');
 function filter(arr, fn) {
   let newArr = [];
   for(let i = 0; i < arr.length; i++) {
-    if (fn(arr[i] === true)) {
-      newArr.push(arr(i)) ;
-    };
+    // if ( fn(arr[i]) === true ) {
+    //   newArr.push(arr[i]) ;
+    // }
+    if ( (arr) => arr[i] === true ) {
+      arr.push(arr[i]);
+    }
+    return newArr;
   }
-  return newArr;
 }
 
 
@@ -37,7 +40,9 @@ const filteredNames = filter(myNames, function(name) {
   return name[0] === 'R';
 });
 
-console.log(filteredNames) // => ['Rich', 'Ray']
+console.log(filteredNames); // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
 
-filter(myNames);
+console.log(filter(myNames, arr => arr[0] === 'R');
+
+filter(myNames, myNames[0] === 'R');
