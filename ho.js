@@ -14,7 +14,7 @@ const goodbye = () => console.log('Goodbye world');
 
 // repeat(goodbye, 5);
 
-function filter(arr, fn()) {
+function filter(arr, fn) {
   let newArr = [];
   for(let i = 0; i < arr.length; i++) {
     if (fn(arr[i] === true)) {
