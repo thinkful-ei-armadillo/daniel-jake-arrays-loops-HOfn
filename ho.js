@@ -77,11 +77,11 @@ posMovements.forEach( ( element ) => console.log(`Our turtle took a total of ${e
 const input = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
 
 const decoder = function (input) {
-  return input.split(' ').reduce((acc, cur) => {
-    if (cur.length === 3) {
+  return input.split(' ').reduce((acc, currVal) => {
+    if (currVal.length === 3) {
       return acc + ' '
     } else {
-      return acc + cur[cur.length - 1].toUpperCase();
+      return acc + currVal[currVal.length - 1].toUpperCase();
     }
   }, '')
 }
