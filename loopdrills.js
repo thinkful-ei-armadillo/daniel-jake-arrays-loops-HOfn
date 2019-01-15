@@ -1,9 +1,9 @@
-'use strict'
+'use strict';
 
 function max(numbers) {
   let currentMax = numbers[0];
   let i = 0;
-  while ( i <= numbers.length ) {
+  while ( i < numbers.length ) {
     if ( numbers[i] >= currentMax ) {
       currentMax = numbers[i]; 
     }
@@ -18,8 +18,20 @@ function max(numbers) {
 // max([1, 2, 3, 4, 5]);
 
 function min (numbers) {
-  // your code here
+  let currentMin = numbers[0];
+  let i = 0;
+  while ( i < numbers.length ) {
+    if ( numbers[i] <= currentMin ) {
+      currentMin = numbers[i]; 
+    }
+    else {
+      return undefined;
+    }
+    i++;
+  }
+  return currentMin;
 }
+
 
 /* From here down, you are not expected to
    understand.... for now :)
